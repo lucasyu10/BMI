@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            background-color: wheat;
+            color: white;
+
+        }
+
+        span {
+            color: red;
+        }
+        .wrapper{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            background-color: #000;
+            border-radius: 5px;
+            box-shadow: rgb(38,57,77) 0px 20px 30px 20px
+
+        }
+        input{
+            outline: none;
+            border: none;
+            padding: 5px;
+        }
+        button{
+            color: white;
+            padding: 10px;
+            border: 2px solid white;
+            background-color: #000;
+        }
+        .box{
+            width: 500px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+            bottom:300px;
+            border-radius: 10px;
+        }
+        .bmi_value{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .memo{
+            text-align: center;
+        }
+        .range{
+            text-align: center;
+        }
+        .box{
+            display: none;
+        }
+        .box.move{
+            display: block;
+            transition: all 3s ease;
+            
+        }
+        .box{
+            display: none;
+        }
+        #none{
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <p>
+            請輸入身高(CM)
+            <input type="text" id="height"><br><span id="heigt_error"></span>
+        </p>
+
+        <p>
+            請輸入體重(KG)
+            <input type="text" id="weight"><br><span id="weight_error"></span>
+        </p>
+
+        <button id="btn">計算</button>
+        <button id="reset">重新計算</button>
+
+    </div>
+    <div class="box">
+        <div class="bmi_value">
+            <span>BMI:<em class="value"></em></span>
+        </div>
+        <div class="memo">
+            <span>溫馨提醒：<em class="memo_1"></em></span>
+        </div>
+        <div class="range">
+            <span>身體範圍: <em class="body"></em></span>
+        </div>
+
+    </div>
+    <script src="./all.js"></script>
+</body>
+
+</html>

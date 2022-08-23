@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: inline-block;
+        }
+
+        .box.pink {
+
+            background-color: pink;
+        }
+
+        .box.blue {
+
+            background-color: blue;
+        }
+
+        .box.aqua {
+            background-color: aqua;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text">
+    <div class="box">送出</div>
+    <div class="box1">分數:</div>
+
+    <script>
+        let input = document.querySelector('input');
+        let box = document.querySelector('.box');
+        let box1 = document.querySelector('.box1');
+        box.onclick = function () {
+            let value = input.value;
+            if (!isNaN(parseInt(value)) || value % 1 == 0) {
+                box1.textContent = '分數:';
+                box1.textContent += '輸入有誤';
+            } else if (value < 50) {
+                box1.textContent = '分數:';
+                box1.textContent += '請重修';
+            } else if (value >= 51 && value <= 60) {
+                box1.textContent = '分數:';
+                box1.textContent += '請補考';
+            } else if (value >= 61 && value <= 70) {
+                box1.textContent = '分數:';
+                box1.textContent += '有及格';
+            } else if (value >= 71 && value <= 79) {
+                box1.textContent = '分數:';                
+                box1.textContent += '成績不錯喔';
+            } else if (value >= 80 && value <= 89) {
+                box1.textContent = '分數:';
+                box1.textContent += '成績很棒喔';
+            } else if (value>=90){
+                box1.textContent = '分數:';
+                box1.textContent+='成績很好喔'
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
